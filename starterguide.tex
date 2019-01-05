@@ -1,0 +1,44 @@
+\documentclass[book,10pt,twoside,twocolumn,openany]{dndbook}
+\usepackage[german]{babel}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hang}
+\usepackage{lipsum}
+\usepackage{listings}
+
+\usepackage{blindtext}
+%\usepackage[explicit]{titlesec}
+\usepackage{todonotes}
+
+% change part format
+\titleformat{\part}[drop]{}{}{0pt}{}
+\titlespacing*{\part}{0pt}{0pt}{0pt}
+
+
+\newcommand\hide[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}
+}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+}
+\cfoot{\_ \\ dnd-gg.github.io}
+\chead{}
+\title{
+ \centering\includegraphics[width=12cm]{img/logo}\\Dungeons And Dragons\\\small Grundregeln und Notizen\\\small ein schneller DnD Einstieg für neue Spieler}
+\date{\today}
+
+% Start document
+\begin{document}
+
+\maketitle
+\tableofcontents
+\include{chapters/0/0_german}
+\include{chapters/1/1_german}
+\include{chapters/2/2_german}
+\include{chapters/3/3_german}
+% \include{chapters/bildquellen}
+\end{document}
